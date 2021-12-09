@@ -1,0 +1,1018 @@
+/*fonts*/
+@font-face {
+    font-family:"Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family:"Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family:"Raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family:"Raleway-extrabold";
+    src: url(../fonts/Raleway-extrabold.ttf);
+}
+@font-face {
+    font-family:"Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family:"Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family:"Raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+
+/* color */
+
+:root {
+    --primary: #fccd4c;
+    --secondary: #232b23;
+    --ternary: #6c6c6c;
+    --danger: #fe4545;
+    --pure: #fefefe;
+    --light:#f0f0f0;
+    --heaven: #ffff;
+    --footer: #2d333d;
+}
+
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    font-family: "Raleway-regular";
+}
+
+.container{
+    width: 100%;
+    margin: 0 15px;
+    margin: 0 auto;
+}
+
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+header.topbar{
+    background-color: var(--secondary);
+    color: var(--pure);
+    font-family:" raleway-semibold";
+    padding: 0.75rem 0;
+}
+header.topbar .auth >div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .icons a{
+    color: var(--pure);
+    margin-right: 0.6rem;
+}
+
+header.topbar .auth .divider{
+     padding: 0 1rem;
+}
+
+
+header.topbar .auth >div i{
+    margin: 0.36rem;
+}
+
+.flex {
+    display: flex;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+
+/* nav */
+
+nav .bar h1{
+    margin-top: 2rem;
+}
+nav .bar label i{
+    float: right;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-right: 0.5rem;
+    display: none;
+}
+.bar h1{
+    color: rgb(255, 174, 0);
+    display: none;
+}
+nav .bar ul{
+     background: var(--secondary);
+     color: var(--pure);
+     top: 0.1rem;
+     width: 50%;
+     margin-top: 1.5rem;
+     left: -100%;
+     display: block;
+     position: absolute;
+     transition: all 0.5s ease;
+     z-index: 1;
+
+}
+nav .bar ul h2{
+    font-size: 18px;
+    color: var(--primary);
+    text-align: center;
+    margin-top: 2rem;
+}
+nav .bar ul li a:hover{
+    background: var(--pure);
+    color: var(--secondary);
+    width: 58%;
+    height: 35px;
+}
+nav .bar ul li .active{
+    background: var(--pure);
+    color: var(--secondary);
+    width: 58%;
+    height: 35px;
+}
+nav .bar ul li{
+    margin-left: 2rem;
+    list-style: none;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light);
+    justify-content: center;
+}
+nav .bar ul li a{
+    text-decoration: none;
+    padding-bottom: 20px;
+    color: var(--pure);
+    position: relative;
+    font-size: 16px;
+    padding: 15px 50px;
+    border-radius: 4px;
+    text-align: center;
+    position: absolute;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+#check{
+    display: none;
+}
+nav .top .contact h5{
+    font-family: "Raleway-black";
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6{
+    font-family: "Raleway-medium";
+    letter-spacing: 0.055rem;
+    color: var(--ternary);
+}
+nav .top .time h5{
+    font-family: "Raleway-black";
+    margin-bottom: 0.25rem;
+}
+nav .top .time h6{
+    font-family: "Raleway-medium";
+    letter-spacing: 0.055rem;
+    font-size: 00.75rem;
+    color: var(--ternary);
+}
+nav .top .contact i, nav .top .time i{
+    margin-right: 1rem;
+    font-size: 25px;
+}
+nav .top .branding img{
+    width: 200px;
+}
+.justify-center{
+    justify-content: center;
+}
+
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "Raleway-semibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+}
+nav .navbar a.active{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+nav .navbar a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.container1{
+    box-shadow: 5px 5px 5px 2px var(--ternary);
+    z-index: -1;
+    background-position: center;
+}
+
+.container2{
+    box-shadow: 5px 5px 5px 2px  var(--ternary);
+    opacity: 1;
+    padding: 1rem 0;
+    bottom: -25px;
+}
+header.hero{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../image/blur_bg_pizza.jpg);
+    background-position: 0% 0%;
+    margin-top: 10px;
+    overflow: hidden;
+}
+header.hero .container{
+    position: relative;
+}
+header.hero .welcome span{
+    font-family: "Raleway-bold";
+    margin-right: 00.75rem;
+}
+header.hero .welcome p{
+    font-size: 30px;
+    color: var(--primary);
+}
+header.hero .welcome{
+    margin-bottom: 0.25rem;
+}
+header.hero h1{
+    font-family: "Raleway-extrabold";
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    font-family: "Raleway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover{
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-secondary{
+    background: var(--secondary);
+    color: var(--heaven);
+}
+.btn-secondary:hover{
+    background: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+header.hero button:first-child{
+    margin-right: 0.5rem;
+}
+header.hero .hero-image{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+
+section{
+    padding: 4rem 0;
+}
+section.top-products{
+    background: var(--light);
+}
+
+.section-heading{
+    font-family: "Raleway-bold";
+    text-align: center;
+    position: relative;
+}
+.section-head{
+    content: '';
+    text-align: center;
+    display: block;
+    margin-bottom: 100px;
+    font-size: 35px;
+    color: var(--primary);
+}
+section.top-products .food-slider .food-card .product-image img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+section.top-products .food-slider .food-card{
+    background-color: var(--heaven);
+    padding: 1.2rem 0;
+    border-radius: 4px;
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-card{
+    font-family: "raleway-bold";
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+.yellow{
+    color: var(--primary);
+}
+#grey{
+    color: var(--ternary);
+}
+.text-center{
+    text-align: center;
+}
+section.top-products .food-slider .food-card .stars{
+    margin-bottom: 0.25rem;
+}
+section.top-products .food-slider .food-card .stars i{
+    margin-right: 0.25rem;
+}
+section.top-products .food-slider .food-card .price{
+    font-family: "Raleway-medium";
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card button{
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 3px solid var(--primary);
+    border-radius: 4px;
+    width: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+section.top-products .food-slider .food-card button:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.food-slider .food-card button i{
+    background: var(--primary);
+    padding: 0 0.50rem;
+    color: var(--pure);
+    font-size: 32px;
+    float: left;
+}
+.food-slider .food-card button span{
+    float: left;
+    margin: 5px 7px;
+    font-size: 1rem;
+    font-family: "Raleway-medium";
+}
+
+.slick-slide{
+    margin: 0 27px;
+}
+.slick-list{
+    margin: 0 27px;
+}
+.top-products .slider-btn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.top-products .slider-btn i{
+    font-size: 40px;
+    color: var(--heaven);
+
+}
+
+.top-products .slider{
+    position: relative;
+}
+.top-products .prev-btn{
+    position: absolute;
+    top: 46%;
+    left: 0;
+    z-index: 1;
+    margin-left: -1.5rem;
+}
+.top-products .next-btn{
+    position: absolute;
+    top: 46%;
+    right: 0;
+    z-index: 1;
+    margin-right: -1.5rem;
+}
+.top-products .btn-wrapper{
+    margin-top: 2rem;
+}
+section.about-meal img{
+    width: 85%;
+    height: 450px;
+    border-radius: 7px;
+}
+.flex-1{
+    flex: 1;
+}
+section.about-meal h2{
+    font-family: "Raleway-bold";
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+}
+section.about-meal ul{
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+
+
+section.our-services{
+    background: var(--light);
+}
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+    margin-top: 3rem;
+}
+section.our-services .service-card{
+    background: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    margin: 3rem;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 5px 5px 2px var(--ternary);
+}
+section.our-services .service-card .icon{
+    position: absolute;
+    font-size: 30px;
+    padding: 5px;
+    border: 2px solid var(--secondary);
+    top: -5px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+}
+section.our-services .service-card .icon1{
+    position: absolute;
+    font-size: 30px;
+    padding: 5px;
+    border: 2px solid var(--primary);
+    top: -5px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+}
+section.our-services .service-card h2{
+    font-family: "Raleway-bold";
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+section.our-services .service-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.text-primary{
+    color: var(--primary);
+}
+section.big-deal{
+    background: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ),url(../image/download.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.big-deal .timer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+}
+section.big-deal .timer div{
+    margin-right: 2rem;
+    background: var(--primary);
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section.big-deal .timer div span:first-child{
+    font-family: "Raleway-semibold";
+    font-size: 2.5rem;
+    color: var(--heaven);
+    margin-bottom: 0.05rem;
+}
+section.big-deal .timer div span:last-child{
+    font-family: "Raleway-medium";
+    color: var(--heaven);
+}
+.text-pure{
+    color: var(--pure);
+}
+
+
+section.latest-news{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+.latest-news .artical-wrapper{
+    display: flex;
+    margin-left: 0.58rem;
+}
+.latest-news .artical-wrapper .card{
+    margin-left: 4rem;
+    background: var(--heaven);
+    border: 4px;
+}
+.latest-news .artical-wrapper .card img{
+    width: 100%;
+}
+.latest-news .artical-wrapper .card .card-content{
+    padding: 2rem;
+}
+.latest-news .artical-wrapper .card .card-content .post-meta{
+    margin-bottom: 1rem;
+}
+.latest-news .artical-wrapper .card .card-content .post-meta div span{
+    margin-left: 1.7rem;
+}
+.latest-news .artical-wrapper .card .card-content h2{
+    font-family: "Raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.latest-news .artical-wrapper .card .card-content p{
+    line-height: 1.6;
+}
+.latest-news .btn-wrapper{
+    margin-top: 2rem;
+}
+
+section.subscribe{
+    background: var(--primary);
+}
+section.subscribe .container > div:first-child img{
+    width: 90%;
+}
+section.subscribe .container div:first-child{
+    flex: 1;
+}
+section.subscribe .container div:last-child{
+    flex: 1;
+}
+section.subscribe h1{
+    font-family: "Raleway-bold";
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+section.subscribe p{
+    font-family: "Raleway-bold";
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+section.subscribe .input-wrap{
+    background: var(--heaven);
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 4px;
+
+}
+section.subscribe .input-wrap input:focus{
+    outline: none;
+}
+section.subscribe .input-wrap input{
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+section.subscribe .input-wrap button{
+    padding: 0.8rem 2rem;
+    border: none;
+    background: var(--primary);
+    color: var(--pure);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+section.subscribe .input-wrap button:hover{
+    background: var(--secondary);
+}
+section.contact-us .contact-info > div > div i{
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px;
+    font-size: 20px;
+    transform: rotate(45deg);
+    margin-right: 1.5rem;
+}
+section.contact-us{
+    padding-top: 0;
+    margin-bottom: 0;
+}
+section.contact-us .contact-info{
+    display: flex;
+    justify-content: center;
+}
+section.contact-us .contact-info-wrapper{
+    padding: 4rem 0;
+    flex: 1;
+}
+section.contact-us .contact-info > div > div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+section.contact-us .map{
+    flex: 1;
+    filter: grayscale(100%);
+}
+section.contact-us .contact-info > div > div > div{
+    display: flex;
+    flex-direction: column;
+}
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-family: "Raleway-bold";
+    margin-bottom: 00.25rem;
+}
+footer{
+    background: var(--footer);
+    padding: 4rem 0;
+}
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+}
+footer .instagram-api img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer .instagram-api .post-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .instagram-api .post-wrapper > div{
+    width: calc(1/3*100% - (1 - 1/3)*10px);
+    margin-bottom: 10px;
+}
+footer .box ul{
+    list-style: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box ul li{
+    margin-bottom: 1rem;
+    margin-left: 5.5rem;
+}
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: left;
+}
+footer .box:nth-child(2){
+    text-align: left;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box:nth-child(2) h3{
+    text-align: center;
+}
+footer .box ul li a i{
+    margin-right: 1rem;
+}
+footer .box ul li{
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and(max-width:992px){
+    nav .bar ul h2{
+        font-size: 14.9px;
+    }
+    nav .bar ul li a{
+        font-size: 23px;
+    }
+    nav .bar ul{
+        margin-top: 3rem;
+    }
+    nav .bar ul li{
+        margin: 4rem 0;
+    }
+    .bar h1{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    nav .bar label i{
+        display: flex;
+    }
+    .topbar{
+        display: none;
+    }
+    .top .contact i{
+       display: none;
+    }
+    .top .contact div {
+        display: none;
+    }
+    .top .time i{
+        display: none;
+    }
+    .top .time div {
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .hero{
+        display: block;
+    }
+    .hero .container .hero-image img{
+        width: 400px;
+        margin-top: -14rem;
+        margin-right: 1.3rem;
+    }
+    .hero .container{
+        top: 43%;
+    }
+    .hero .container h1{
+        margin-left: 1rem;
+        font-size: 40px;
+    }
+    .hero .container p{
+        margin-left: 1rem;
+    }
+    .hero .container .welcome p{
+         font-size: 16.5px;
+    }
+    
+    section.our-services .service-card{
+        width: 45%;
+        margin-left: 6rem;
+    }
+    .section-head{
+        font-size: 34px;
+    }
+    .btn-1{
+        text-align: center;
+    }
+    
+    .top-products .slider-btn{
+        display: none!important;
+    }
+
+    .about-meal-wrap{
+        display: block;
+        text-align: center;
+    }
+    .card-wrapper{
+        display: block;
+    }
+    section.big-deal .timer div{
+        width: 100px;
+        height: 100px;
+    }
+    .latest-news .artical-wrapper{
+        display: block;
+    }
+    .latest-news .artical-wrapper .card{
+        margin-bottom: 2rem;
+        margin-right: 4.3rem;
+
+    }
+    .card-content{
+        font-size: 12px;
+    }
+    .subscribe .container{
+        display: block;
+    }
+    .subscribe .container h1{
+        text-align: center;
+    }
+    .subscribe .container div img{
+        text-align: center;
+    }
+    section.contact-us{
+        display: block;
+    }
+    footer .container{
+        display: block;
+    }
+    footer .container .box{
+        margin-bottom: 3rem;
+        
+    }
+}
+@media only screen and (max-width:525px){
+    nav .bar ul h2{
+        font-size: 13px;
+    }
+    nav .bar ul li a{
+        font-size: 18px;
+    }
+    .hero .container .hero-image img{
+        width: 200px;
+        text-align: center;
+    }
+
+    .hero .container{
+        top: 30%;
+    }
+    
+    nav .bar ul li a:hover{
+        width: 50%;
+    }
+    nav .bar ul li .active{
+        width: 50%;
+    }
+    .hero .container h1{
+        margin-left: 1rem;
+        font-size: 20px;
+    }
+    .hero .container p{
+        margin-left: 1rem;
+    }
+    .hero .container .welcome p{
+         font-size: 9px;
+    }
+    
+    section.our-services .service-card{
+        width: 45%;
+        text-align: center;
+        justify-content: center;
+    }
+    .section-head{
+        font-size: 34px;
+    }
+    .btn-1{
+        text-align: center;
+        margin-top: 5rem;
+    }
+    
+    .top-products .slider-btn{
+        display: none!important;
+    }
+     .section-head{
+         font-size: 18px;
+     }
+      
+     .food-card .product-image img{
+         width: 150px;
+         top: 0;
+     }
+     .food-card div h2{
+         font-size: 15px;
+         top: 0%;
+     }
+     .about-meal-wrap div{
+         margin-bottom: 5rem;
+     }
+    
+    section.big-deal .timer div{
+        width: 50px;
+        height: 65px;
+        margin: 0 0.10rem;
+        margin-right: 1rem;
+    }
+    section.big-deal .timer div span{
+        font-size: 10px;
+    }
+    .latest-news .artical-wrapper .card{
+        margin-bottom: 2rem;
+        margin-right: 3.5rem;
+
+    }
+    .card-content .post-meta{
+        justify-content: space-between;
+    }
+    .card-content .post-meta span{
+        font-size: 6.9px;
+    }
+}
+@media only screen and (max-width:402px){
+    nav .bar ul h2{
+        font-size: 9px;
+    }
+    .bar h1{
+        font-size: 18px;
+    }
+    nav .bar ul li a:hover{
+        width: 30%;
+    }
+    nav .bar ul li .active{
+        width: 30%;
+    }
+    nav .bar ul li a{
+        font-size: 7.3px;
+    }
+    .food-slider .food-card{
+        width: 40%;
+    }
+    section.top-products .food-slider .food-card button{
+        width: 90%;
+    }
+    section.our-services .card-wrapper .service-card{
+       width: 50%;
+       margin-left: 40px;
+    }
+    .latest-news .artical-wrapper .card{
+        width: 80%;
+        margin-left: 20px;
+    }
+    .card-content .post-meta span{
+        font-size: 4.1px;
+    }
+}
+@media only screen and (min-width:992px){
+    .hero .container .hero-image img{
+        margin-left: 25rem;
+        width: 75%;
+    }
+    .container1{
+        width: 82%;
+    }
+    section.top-products .food-slider .food-card button{
+        width: 60%;
+    }
+    .navbar .container1{
+        width: 82%;
+    }
+
+}
+@media only screen and (min-width:1280px){
+    .navbar .container1{
+        width: 65.6%;
+    }
+}
