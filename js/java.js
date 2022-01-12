@@ -7,10 +7,16 @@ $(document).ready(function(){
        nextArrow:".next-btn",
        responsive:[
            {
-               breakpoint:992,
+               breakpoint:1200,
                settings:{
-                slidesToShow:1,
+                slidesToShow:2,
                }
+           },
+           {
+            breakpoint:750,
+            settings:{
+             slidesToShow:1,
+            }  
            }
        ]
 

@@ -60,21 +60,21 @@ body{
 }
 
 
-@media screen and (min-width:576px){
+@media only screen and (min-width:576px){
     .container{
         max-width: 540px;
     }
 }
-@media screen and (min-width:768px){
+@media only screen and (min-width:768px){
     .container{
         max-width: 720px;
     }
 }
-@media screen and (min-width:992px){
+@media only screen and (min-width:992px){
     .container{
         max-width: 960px;
     }
-}@media screen and (min-width:1200px){
+}@media only screen and (min-width:1200px){
     .container{
         max-width: 1152px;
     }
@@ -115,75 +115,6 @@ header.topbar .auth >div i{
 
 /* nav */
 
-nav .bar h1{
-    margin-top: 2rem;
-}
-nav .bar label i{
-    float: right;
-    font-size: 60px;
-    font-weight: bolder;
-    margin-right: 0.5rem;
-    display: none;
-}
-.bar h1{
-    color: rgb(255, 174, 0);
-    display: none;
-}
-nav .bar ul{
-     background: var(--secondary);
-     color: var(--pure);
-     top: 0.1rem;
-     width: 50%;
-     margin-top: 1.5rem;
-     left: -100%;
-     display: block;
-     position: absolute;
-     transition: all 0.5s ease;
-     z-index: 1;
-
-}
-nav .bar ul h2{
-    font-size: 18px;
-    color: var(--primary);
-    text-align: center;
-    margin-top: 2rem;
-}
-nav .bar ul li a:hover{
-    background: var(--pure);
-    color: var(--secondary);
-    width: 58%;
-    height: 35px;
-}
-nav .bar ul li .active{
-    background: var(--pure);
-    color: var(--secondary);
-    width: 58%;
-    height: 35px;
-}
-nav .bar ul li{
-    margin-left: 2rem;
-    list-style: none;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid var(--light);
-    justify-content: center;
-}
-nav .bar ul li a{
-    text-decoration: none;
-    padding-bottom: 20px;
-    color: var(--pure);
-    position: relative;
-    font-size: 16px;
-    padding: 14px 50px;
-    border-radius: 4px;
-    text-align: center;
-    position: absolute;
-}
-#check:checked ~ ul{
-    left: 0;
-}
-#check{
-    display: none;
-}
 nav .top .contact h5{
     font-family: "Raleway-black";
     margin-bottom: 0.25rem;
@@ -219,7 +150,7 @@ nav .navbar a{
     color: var(--secondary);
     font-family: "Raleway-semibold";
     font-size: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.2rem;
     transition: all 0.3s ease;
 }
 nav .navbar a.active{
@@ -231,9 +162,10 @@ nav .navbar a:hover{
     color: var(--pure);
 }
 .container1{
-    box-shadow: 5px 5px 5px 2px var(--ternary);
+    box-shadow: 3px 3px 3px var(--ternary);
     z-index: -1;
     background-position: center;
+    width: 85%;
 }
 
 .container2{
@@ -756,267 +688,328 @@ footer .box ul li a i{
 footer .box ul li{
     margin-bottom: 1.5rem;
 }
+.checkbtn{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 0 5px;
+    font-size: 35px;
+    border-radius: 5px;
+    color: rgb(172, 169, 169);
+    background: var(--light);
+    display: none;
+}
+#check{
+    display: none;
+}
+.container1 h3{
+    display: none;
+}
+.container1 label{
+    display: none;
+}
+/*media quries*/
 
-@media screen and (max-width:992px){
-    nav .bar ul h2{
-        font-size: 14.9px;
+@media only screen and (max-width:1200px){
+    nav .navbar a{
+        font-size: 0.81rem;
+        padding: 1rem 2rem;
     }
-    nav .bar ul li a{
-        font-size: 23px;
+    .container1{
+        width: 89%;
     }
-    nav .bar ul{
-        margin-top: 3rem;
+    header.hero .hero-image {
+        position: absolute;
+        top: -40px;
+        right: -67px;
     }
-    nav .bar ul li{
-        margin: 4rem 0;
+    .top-products .next-btn {
+        margin-right: 0rem;
     }
-    .bar h1{
+    .top-products .prev-btn {
+        margin-left: 0rem;
+    }
+    section.our-services .card-wrapper {
+        margin: 0;
+    }
+    section.big-deal .timer {
+        margin: 0;
+    }
+    .latest-news .artical-wrapper {
+        margin-right: 5rem;
+    }
+    .section-head {
+        font-size: 32px;
+    }
+    .latest-news .artical-wrapper .card .card-content .post-meta div{
         display: flex;
-        text-align: center;
-        justify-content: center;
     }
-    nav .bar label i{
-        display: flex;
+}
+
+@media only screen and (max-width:992px){
+    nav .navbar a{
+        font-size: 0.66rem;
+        padding: 0.7rem 0.86rem;
     }
-    .topbar{
-        display: none;
+    .slider .slider-btn{
+        display: none !important;
     }
-    .top .contact i{
-       display: none;
+    section.top-products .food-slider .food-card button{
+        width: 78%;
     }
-    .top .contact div {
-        display: none;
+    .text-center{
+        font-size: 20px;
     }
-    .top .time i{
-        display: none;
+    .container1{
+        width: 70%;
     }
-    .top .time div {
-        display: none;
+    .hero-image img{
+        width: 250px;
+        height: 200px;
     }
-    .navbar{
-        display: none;
+    header.hero .hero-image {
+        right: -70px;
+        margin-top: 5rem;
     }
-    .hero{
-        display: block;
+    header.hero .welcome p {
+        font-size: 17px;
     }
-    .hero .container .hero-image img{
-        width: 400px;
-        margin-top: -14rem;
-        margin-right: 1.3rem;
+    header.hero .welcome span {
+        font-size: 20px;
     }
     .hero .container{
-        top: 43%;
+        top: -50px;
     }
-    .hero .container h1{
-        margin-left: 1rem;
-        font-size: 40px;
-    }
-    .hero .container p{
-        margin-left: 1rem;
-    }
-    .hero .container .welcome p{
-         font-size: 16.5px;
-    }
-    
-    section.our-services .service-card{
-        width: 45%;
-        margin-left: 6rem;
-    }
-    .section-head{
-        font-size: 34px;
-    }
-    .btn-1{
-        text-align: center;
-    }
-    
-    .top-products .slider-btn{
-        display: none!important;
-    }
-
-    .about-meal-wrap{
-        display: block;
-        text-align: center;
-    }
-    .card-wrapper{
-        display: block;
-    }
-    section.big-deal .timer div{
-        width: 100px;
-        height: 100px;
+    section.our-services .card-wrapper .service-card {
+        flex-direction: row;
+        width: 50%;
+        margin: 0 1rem;
     }
     .latest-news .artical-wrapper{
-        display: block;
+        flex-direction: column;
     }
     .latest-news .artical-wrapper .card{
         margin-bottom: 2rem;
-        margin-right: 4.3rem;
+    }
+    footer .box ul li a i{
+        margin-right: 0.5rem;
+    }
+    footer .box ul li{
+        margin-left: 3rem;
+    }
+}
 
-    }
-    .card-content{
-        font-size: 12px;
-    }
-    .subscribe .container{
+@media only screen and (max-width:750px) {
+    section.our-services .card-wrapper {
         display: block;
     }
-    .subscribe .container h1{
-        text-align: center;
+    section.our-services .card-wrapper .service-card {
+        width: 40%;
+        margin: 3rem auto;
     }
-    .subscribe .container div img{
-        text-align: center;
-    }
-    section.contact-us{
-        display: block;
+    footer .box ul li{
+        margin-left: 3rem;
     }
     footer .container{
         display: block;
-    }
-    footer .container .box{
-        margin-bottom: 3rem;
-        
-    }
-}
-@media screen and (max-width:525px){
-    nav .bar ul h2{
-        font-size: 13px;
-    }
-    nav .bar ul li a{
-        font-size: 18px;
-    }
-    .hero .container .hero-image img{
-        width: 200px;
         text-align: center;
-    }
-
-    .hero .container{
-        top: 30%;
-    }
-    
-    nav .bar ul li a:hover{
-        width: 50%;
-    }
-    nav .bar ul li .active{
-        width: 50%;
-    }
-    .hero .container h1{
-        margin-left: 1rem;
-        font-size: 20px;
-    }
-    .hero .container p{
-        margin-left: 1rem;
-    }
-    .hero .container .welcome p{
-         font-size: 9px;
-    }
-    
-    section.our-services .service-card{
-        width: 45%;
-        text-align: center;
-        justify-content: center;
-    }
-    .section-head{
-        font-size: 34px;
-    }
-    .btn-1{
-        text-align: center;
-        margin-top: 5rem;
-    }
-    
-    .top-products .slider-btn{
-        display: none!important;
-    }
-     .section-head{
-         font-size: 18px;
-     }
-      
-     .food-card .product-image img{
-         width: 150px;
-         top: 0;
-     }
-     .food-card div h2{
-         font-size: 15px;
-         top: 0%;
-     }
-     .about-meal-wrap div{
-         margin-bottom: 5rem;
-     }
-    
-    section.big-deal .timer div{
-        width: 50px;
-        height: 65px;
-        margin: 0 0.10rem;
-        margin-right: 1rem;
-    }
-    section.big-deal .timer div span{
-        font-size: 10px;
-    }
-    .latest-news .artical-wrapper .card{
-        margin-bottom: 2rem;
-        margin-right: 3.5rem;
-
-    }
-    .card-content .post-meta{
-        justify-content: space-between;
-    }
-    .card-content .post-meta span{
-        font-size: 6.9px;
-    }
-}
-@media screen and (max-width:402px){
-    nav .bar ul h2{
-        font-size: 9px;
-    }
-    .bar h1{
-        font-size: 18px;
-    }
-    nav .bar ul li a:hover{
-        width: 30%;
-    }
-    nav .bar ul li .active{
-        width: 30%;
-    }
-    nav .bar ul li a{
-        font-size: 7.3px;
-    }
-    .food-slider .food-card{
-        width: 40%;
     }
     section.top-products .food-slider .food-card button{
-        width: 90%;
+        width: 45%;
     }
-    section.our-services .card-wrapper .service-card{
-       width: 50%;
-       margin-left: 40px;
+    .topbar{
+        display: none ;
     }
-    .latest-news .artical-wrapper .card{
-        width: 80%;
-        margin-left: 20px;
+    .contact{
+        display: none !important;
     }
-    .card-content .post-meta span{
-        font-size: 4.1px;
+    .time{
+        display: none !important ;
     }
-    section.contact-us .contact-info > div > div i{
-        padding: 0;
-        font-size: 15px;margin-right: 0.5rem;
+    .branding{
+        margin: 0 auto;
     }
-}
-@media screen and (min-width:992px){
-    .hero .container .hero-image img{
-        margin-left: 25rem;
-        width: 75%;
+    .checkbtn{
+        display: block;
+    }
+    nav .navbar a{
+        display: block;
+        font-size: 15px;
+        padding: 15px;
+        padding-left: 40px;
     }
     .container1{
-        width: 82%;
+        width: 50%;
+        height: 100vh;
+        left: -100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background: var(--light);
+        transition: all 0.5s ease;
+    }
+    #check:checked~.container1{
+        left: 0;
+    }
+    .container1 .brands{
+        padding: 20px;
+        color: var(--primary);
+        display: block;
+    }
+    .container1 .brands span{
+        color: var(--danger);
+    }
+    .btn-2{
+        position: absolute;
+        font-size: 40px;
+        right: 10px;
+        top: 10px;
+        padding: 0.4rem;
+        display: block !important;
+    }
+    header.hero .welcome p {
+        font-size: 14px;
+    }
+    .hero{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .hero .container{
+        padding-left: 1rem;
+    }
+    header.hero .hero-image {
+        right: -50px;
+        margin-top: 7rem;
+    }
+    .about-meal-wrap{
+        display: block;
+        padding-left: 3.5rem;
+    }
+    .about-meal-wrap .flex-1 h2{
+        padding: 1rem;
+        text-align: center;
+    }
+    .section-head {
+        font-size: 28px;
+    }
+    section.big-deal .timer div {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        width: 150px;
+        height: 100px;
+    }
+    section.subscribe div{
+        display: block;
+    }
+    section.subscribe div:last-child{
+        text-align: center;
+    }
+    .contact-us{
+        display: block;
+    }
+}
+
+@media only screen and (max-width:575px){
+    .container1{
+        width: 100%;
+    }
+    .container1 .brands{
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (max-width:450px){
+    header.hero{
+        height: 400px;
+    }
+    header.hero p {
+        width: 79%;
+    }
+    header.hero p{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    header.hero .container{
+        margin-top: 12rem;
+    }
+    header.hero .hero-image {
+        right: 50px;
+        margin-top: -6rem;
+    }
+    .hero-image img {
+        width: 200px;
+        height: 150px;
+    }
+    .section-head {
+        font-size: 21px;
+    }
+    section.about-meal img{
+        height: 300px;
     }
     section.top-products .food-slider .food-card button{
-        width: 60%;
+        width: 61%;
     }
-    .navbar .container1{
-        width: 82%;
+    .latest-news .artical-wrapper .card{
+        width: 100%;
     }
-
+    .latest-news .artical-wrapper .card{
+        margin-left: 3rem;
+    }
+    section.big-deal .timer div{
+        height: 75px;
+    }
+    .latest-news .artical-wrapper .card .card-content .post-meta{
+        font-size: 12px;
+    }
+    footer .box{
+        margin-right: 0rem;
+    }
+    footer .box h3{
+        margin-top: 0.5rem;
+    }
 }
-@media screen and (min-width:1280px){
-    .navbar .container1{
-        width: 65.6%;
+
+@media only screen and (max-width:350px){
+    header.hero{
+        height: 450px;
+    }
+    header.hero .welcome p{
+        font-size: 9px;
+    }
+    header.hero button{
+        width: 40%;
+        height: auto;
+    }
+    section.top-products .food-slider .food-card .product-image img{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    section.top-products .food-slider .food-card button{
+        width: 98%;
+    }
+    .container1 .brands{
+        margin-left: 0.5rem;
+        font-size: 15px;
+    }
+    .btn-2{
+        font-size: 30px;
+    }
+    section.big-deal .timer{
+        display: block;
+    }
+    section.big-deal .timer div{
+        height: 100px;
+        width: 100px;
+        margin: 2rem auto;
+    }
+    .section-head {
+        font-size: 17px;
+    }
+    .latest-news .artical-wrapper .card .card-content .post-meta{
+        display: none;
+    }
+    section.contact-us .contact-info > div > div{
+        font-size: 12px;
     }
 }
